@@ -82,7 +82,7 @@ namespace ProductWebAPI.Controllers
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok("Product deleted");
         }
 
         private bool ProductExists(Guid id)
